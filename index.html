@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crorepati Calculator</title>
+</head>
+<body>
+    <div id="container">
+        <div id="input">
+            <form>
+                <label for="lumpsum">Lumpsum Available</label>
+                <input type="number" id="lumpsum"><br>
+                <label for="contribution">Monthly Investment</label>
+                <input type="number" id="contribution" required><br>
+                <label for="expectedReturn">expected yearly Return in percentage</label>
+                <input type="number" id="expectedReturn" required><br>
+                <label for="expectedInflation">Expected yearly Inflation in percentage</label>
+                <input type="number" id="expectedInflation" value="6" ><br>
+                <!-- <label for="yearlyIncrease">Percentage Increase each year</label>
+                <input type="number" id="yearlyIncrease"><br> -->
+                <label for="duration">Number of years planning to invest</label>
+                <input type="number" id="duration" required><br>
+
+                <input type="submit" id="calculate" value="calculate">
+            </form>      
+        </div>
+        <div id="output">
+
+        </div>
+    </div>
+    <script src="./calculate.js"></script>
+</body>
+</html>
