@@ -40,7 +40,7 @@ submitBtn.addEventListener('click', function(e){
             return futureValue;
         }
 
-        let increase=0.1;
+        let increase=0.01;
         while(calculateWithYearlyIncrement(increase)<10000000){
             increase=increase+0.01;
         }
