@@ -8,7 +8,6 @@ submitBtn.addEventListener('click', function(e){
     const monthlyContribution=document.getElementById("contribution").value;
     const expectedReturn=(document.getElementById("expectedReturn").value)/100;
     const expectedInflation=(document.getElementById("expectedInflation").value)/100;
-    // const yearlyIncrement=document.getElementById("yearlyIncrease").value;
     const noOfYears=document.getElementById("duration").value;
     const noOfMonths=noOfYears*12;
 
@@ -40,7 +39,7 @@ submitBtn.addEventListener('click', function(e){
             return futureValue;
         }
 
-        let increase=0.1;
+        let increase=0.01;
         while(calculateWithYearlyIncrement(increase)<10000000){
             increase=increase+0.01;
         }
