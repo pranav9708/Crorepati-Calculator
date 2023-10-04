@@ -1,17 +1,21 @@
-const submitBtn=document.getElementById('calculate');
-const outputDiv=document.getElementById('output');
 
-submitBtn.addEventListener('click', function(e){
+// calculate.js
+document.addEventListener('DOMContentLoaded', function () {
+    const submitBtn = document.getElementById('calculate');
+    const form = document.getElementById('calculator-form');
+    const outputDiv = document.getElementById('output');
 
-    e.preventDefault();
-    const lumpsumAmount=document.getElementById("lumpsum").value;
-    const monthlyContribution=document.getElementById("contribution").value;
-    const expectedReturn=(document.getElementById("expectedReturn").value)/100;
-    const expectedInflation=(document.getElementById("expectedInflation").value)/100;
-    const noOfYears=document.getElementById("duration").value;
-    const noOfMonths=noOfYears*12;
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        // Get form values here
+        const lumpsumAmount = parseFloat(document.getElementById("lumpsum").value);
+        const monthlyContribution = parseFloat(document.getElementById("contribution").value);
+        const expectedReturn = parseFloat(document.getElementById("expectedReturn").value) / 100;
+        const expectedInflation = parseFloat(document.getElementById("expectedInflation").value) / 100;
+        const noOfYears = parseFloat(document.getElementById("duration").value);
+        const noOfMonths = noOfYears * 12;
 
-    calculateReturn=()=>{
+        calculateReturn=()=>{
         const expectedMonthlyReturn=(expectedReturn-expectedInflation)/12;
         const futureValue=lumpsumAmount*Math.pow((1+(expectedReturn-expectedInflation)),noOfYears)+monthlyContribution*((Math.pow((1+expectedMonthlyReturn),noOfMonths)-1)/expectedMonthlyReturn)*(1+expectedMonthlyReturn);
         return futureValue;
@@ -88,4 +92,5 @@ submitBtn.addEventListener('click', function(e){
         console.log(returns);
         console.log(contribution);
     }
-})
+    });
+});

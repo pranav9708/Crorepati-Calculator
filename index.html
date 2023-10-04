@@ -1,15 +1,19 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Crorepati Calculator</title>
 </head>
+
 <body>
     <div id="container">
         <div id="input">
-            <form>
+            <form id="calculator-form">
                 <label for="lumpsum">Lumpsum Available</label>
                 <input type="number" id="lumpsum"><br>
                 <label for="contribution">Monthly Investment</label>
@@ -17,17 +21,17 @@
                 <label for="expectedReturn">expected yearly Return in percentage</label>
                 <input type="number" id="expectedReturn" required><br>
                 <label for="expectedInflation">Expected yearly Inflation in percentage</label>
-                <input type="number" id="expectedInflation" value="6" ><br>
+                <input type="number" id="expectedInflation" value="6"><br>
                 <label for="duration">Number of years planning to invest</label>
                 <input type="number" id="duration" required><br>
-
-                <input type="submit" id="calculate" value="calculate">
-            </form>      
+                <input type="submit" id="calculate" value="Calculate">
+            </form>
         </div>
         <div id="output">
-
+            <!-- Results will be displayed here -->
         </div>
     </div>
-    <script src="./calculate.js"></script>
+    <script src="calculate.js"></script>
 </body>
+
 </html>
